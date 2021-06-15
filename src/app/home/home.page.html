@@ -6,15 +6,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p class="font-cursive italic font-black">Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true">
+
+  <div class="bg-white p-1" @staggerFade>
+    <ng-container *ngFor="let option of options">
+      <div class="grid grid-cols-1 grid-rows-1 mt-1">
+        <ion-img class="col-start-1 col-span-1 row-start-1 row-span-1" [src]="option.image"></ion-img>
+        <div class="col-start-1 col-span-1 row-start-1 row-span-1 option-image-mask"></div>
+        <span class="col-start-1 col-span-1	row-start-1 row-span-1 self-center	justify-self-center font-cursive text-3xl">{{ option.name }}</span>
+      </div>
+    </ng-container>
   </div>
 </ion-content>
