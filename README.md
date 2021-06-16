@@ -7,7 +7,7 @@
 [![Node](https://img.shields.io/badge/Node-12.7.0-darkgreen.svg?style=for-the-badge)]()
 [![NPM](https://img.shields.io/badge/NPM-7.7.5-darkred.svg?style=for-the-badge)]()
 
-<img alt="restaurant app preview" src="https://github.com/williamjuan027/ionic-restaurant-demo/blob/master/screenshots/fancy-restaurant-youtube-thumbnail.png" width="500">
+<img alt="restaurant app preview" src="https://github.com/williamjuan027/ionic-restaurant-demo/blob/main/screenshots/fancy-restaurant-youtube-thumbnail.png" width="500">
 
 ## Development
 
