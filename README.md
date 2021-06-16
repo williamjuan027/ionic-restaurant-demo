@@ -1,6 +1,6 @@
 # Restaurant Demo
 
-> 🥂 Demo for Ionic Angular Speed Code Youtube Series
+> 🥂 Demo for Ionic Angular Speed Code [Youtube Series](https://www.youtube.com/watch?v=sZAIn2U-6UY&list=PL44i_PSsr5XyusHaVIxJm9jLG8prnBc15)
 
 [![Ionic](https://img.shields.io/badge/Ionic-5-blue.svg?style=for-the-badge)]()
 [![Angular](https://img.shields.io/badge/Angular-12-red.svg?style=for-the-badge)]()
