@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { staggerFadeAnimation } from '../core';
+import { AppRoutes, NavigationService, staggerFadeAnimation } from '@app/core';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,9 @@ export class HomePage {
     {
       name: 'lunch',
       image: 'assets/images/main-lunch.png',
-      onTap: () => {},
+      onTap: () => {
+        this.navigationService.navigateTo(AppRoutes.lunch);
+      },
     },
     {
       name: 'dinner',
@@ -31,5 +33,5 @@ export class HomePage {
     },
   ];
 
-  constructor() {}
+  constructor(private navigationService: NavigationService) {}
 }

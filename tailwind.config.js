@@ -17,6 +17,13 @@ module.exports = {
         fontFamily: {
           sans: ['Lato', ...defaultTheme.fontFamily.sans],
           cursive: ['Dancing Script', 'cursive']
+        },
+        colors: {
+          'brand-accent': '#C2A68E',
+          'brand-gray-dark': '#9B9B9B',
+          'brand-gray-medium': '#B4AFAC',
+          'brand-gray-light': '#BEBBB6',
+          'brand-white': '#FFFFFF',
         }
       },
     },

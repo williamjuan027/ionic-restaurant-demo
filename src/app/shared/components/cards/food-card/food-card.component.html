@@ -1,0 +1,9 @@
+<ng-container *ngIf="food">
+    <div class="grid grid-cols-1 grid-rows-4 mt-1 shadow-md">
+        <ion-img class="col-start-1 col-span-1 row-start-1 row-span-3" [src]="food.image"></ion-img>
+        <div class="col-start-1 col-span-1 row-start-3 row-span-2 self-center justify-self-center grid grid-rows-2 bg-white w-9/12 p-5 shadow-lg">
+            <span class="col-start-1 col-span-1	row-start-1 row-span-1 self-center justify-self-center font-cursive text-3xl text-brand-accent">{{ food.name }}</span>
+            <span class="col-start-1 col-span-1	row-start-2 row-span-1 self-center justify-self-center font-sans text-sm text-brand-gray-light">{{ food.description }}</span>
+        </div>
+    </div>
+</ng-container>

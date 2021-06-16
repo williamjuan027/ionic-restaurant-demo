@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="light">
+        <ion-buttons slot="start">
+            <ion-icon (click)="back()" color="primary" slot="icon-only" name="chevron-back-outline"></ion-icon>
+          </ion-buttons>
+        <ion-title color="primary" class="text-center">
+            <span class="text-center font-cursive">Lunch</span>
+        </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content [fullscreen]="true">
+  
+    <div class="bg-white p-1" @staggerFade>
+      <ng-container *ngFor="let food of foodOptions">
+          <div>
+              <app-food-card [food]="food"></app-food-card>
+          </div>
+      </ng-container>
+    </div>
+  </ion-content>
+  
