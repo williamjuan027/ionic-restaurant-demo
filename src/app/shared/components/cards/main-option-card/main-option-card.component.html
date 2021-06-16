@@ -1,0 +1,7 @@
+<ng-container *ngIf="option">
+    <div class="grid grid-cols-1 grid-rows-1 mt-1 shadow-md" (click)="option.onTap && option.onTap()">
+        <ion-img class="col-start-1 col-span-1 row-start-1 row-span-1" [src]="option.image"></ion-img>
+        <div class="col-start-1 col-span-1 row-start-1 row-span-1 option-image-mask"></div>
+        <span class="col-start-1 col-span-1	row-start-1 row-span-1 self-center justify-self-center font-cursive text-4xl text-brand-white">{{ option.name }}</span>
+    </div>
+</ng-container>

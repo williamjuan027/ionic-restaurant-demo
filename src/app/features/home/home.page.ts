@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppRoutes, NavigationService, staggerFadeAnimation } from '@app/core';
+import { IOption } from '@app/shared';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { AppRoutes, NavigationService, staggerFadeAnimation } from '@app/core';
   animations: [staggerFadeAnimation],
 })
 export class HomePage {
-  options: { name: string; image: string; onTap: () => void }[] = [
+  options: IOption[] = [
     {
       name: 'reservation',
       image: 'assets/images/main-reservation.png',
