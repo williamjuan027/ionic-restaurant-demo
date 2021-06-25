@@ -1,0 +1,9 @@
+<div *ngIf="isOpen$ | async" @container class="h-screen grid grid-rows-1 grid-cols-1">
+    <!-- shade -->
+    <div @fade class="row-start-1 row-span-1 col-start-1 col-span-1 bg-black bg-opacity-50" (click)="close()"></div>
+
+    <!-- bottomsheet -->
+    <div @slideUp class="row-start-1 row-span-1 col-start-1 col-span-1 z-10 self-end p-10 bg-white rounded-t-2xl">
+        <p class="text-brand-gray-light">Bottomsheet</p>
+    </div>
+</div>

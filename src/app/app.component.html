@@ -1,3 +1,12 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <div class="grid grid-rows-1 grid-cols-1">
+    <div>
+      <ion-router-outlet></ion-router-outlet>
+    </div>
+
+    <!-- layers -->
+    <div class="z-40">
+      <app-food-details-bottomsheet></app-food-details-bottomsheet>
+    </div>
+  </div>
 </ion-app>

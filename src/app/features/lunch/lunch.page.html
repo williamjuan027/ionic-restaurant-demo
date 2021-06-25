@@ -14,7 +14,7 @@
   
     <div class="bg-white p-1" @staggerFade>
       <ng-container *ngFor="let food of foodOptions">
-          <div>
+          <div (click)="openFoodDetailsBottomsheet()">
               <app-food-card [food]="food"></app-food-card>
           </div>
       </ng-container>

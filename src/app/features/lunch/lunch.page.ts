@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { NavigationService, staggerFadeAnimation } from '@app/core';
+import {
+  LayersService,
+  NavigationService,
+  staggerFadeAnimation,
+} from '@app/core';
 import { IFoodCard } from '@app/shared';
 
 @Component({
@@ -27,9 +31,16 @@ export class LunchPage {
     },
   ];
 
-  constructor(private navigationService: NavigationService) {}
+  constructor(
+    private navigationService: NavigationService,
+    private layersService: LayersService
+  ) {}
 
   back(): void {
     this.navigationService.back();
+  }
+
+  openFoodDetailsBottomsheet(): void {
+    this.layersService.openFoodDetailsBottomsheet();
   }
 }
