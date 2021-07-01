@@ -6,6 +6,7 @@ import { LunchPage } from './lunch.page';
 
 import { LunchPageRoutingModule } from './lunch-routing.module';
 import { SharedModule } from '@app/shared';
+import { OptionsDrawerComponent } from './options-drawer/options-drawer.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { SharedModule } from '@app/shared';
     LunchPageRoutingModule,
     SharedModule,
   ],
-  declarations: [LunchPage],
+  declarations: [LunchPage, OptionsDrawerComponent],
 })
 export class LunchPageModule {}
