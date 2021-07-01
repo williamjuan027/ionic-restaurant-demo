@@ -1,0 +1,28 @@
+<ion-accordion-group>
+    <ion-accordion value="starter">
+      <ion-item slot="header">
+              <ion-label class="text-center pl-10">
+                  <span class="font-sans text-brand-gray-medium text-lg">
+                      Starters
+                  </span>
+              </ion-label>
+      </ion-item>
+  
+      <ion-list slot="content" lines="none">
+          <ng-container *ngFor="let option of drawerOptions">
+              <ion-item class="h-10">
+                <ion-label class="text-center">
+                    <span
+                    class="font-sans text-brand-gray-light text-sm"
+                    [class.font-medium]="option.type === 'sectionHeader'"
+                    [class.text-brand-gray-dark]="option.type === 'sectionHeader'"
+                    [class.text-xl]="option.type === 'sectionHeader'">
+                    {{ option.name }}
+                    </span>
+                </ion-label>
+              </ion-item>
+          </ng-container>
+      </ion-list>
+    </ion-accordion>
+  </ion-accordion-group>
+  

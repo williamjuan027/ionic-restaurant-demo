@@ -3,7 +3,7 @@
         <ion-buttons slot="start">
             <ion-icon (click)="back()" color="primary" slot="icon-only" name="chevron-back-outline"></ion-icon>
           </ion-buttons>
-        <ion-title color="primary" class="text-center">
+        <ion-title color="primary" class="text-center pr-12">
             <span class="text-center font-cursive">Lunch</span>
         </ion-title>
     </ion-toolbar>
@@ -12,12 +12,17 @@
   
   <ion-content [fullscreen]="true">
   
-    <div class="bg-white p-1" @staggerFade>
-      <ng-container *ngFor="let food of foodOptions">
-          <div (click)="openFoodDetailsBottomsheet()">
-              <app-food-card [food]="food"></app-food-card>
-          </div>
-      </ng-container>
+    <div class="grid grid-rows-1 grid-cols-1">
+      <div class="row-start-1 row-span-1 col-start-1 col-span-1 bg-white p-1 mt-12" @staggerFade>
+        <ng-container *ngFor="let food of foodOptions">
+            <div (click)="openFoodDetailsBottomsheet()">
+                <app-food-card [food]="food"></app-food-card>
+            </div>
+        </ng-container>
+      </div>
+      <div class="fixed w-full row-start-1 row-span-1 col-start-1 col-span-1 z-40">
+        <app-options-drawer></app-options-drawer>
+      </div>
     </div>
   </ion-content>
   

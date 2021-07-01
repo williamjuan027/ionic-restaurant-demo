@@ -4,7 +4,7 @@ export const slideUpAnimation = trigger('slideUp', [
   transition(':enter', [
     style({ transform: 'translate(0,500px)' }),
     animate(
-      '500ms cubic-bezier(0.17, 0.89, 0.24, 1.11)',
+      '350ms cubic-bezier(0.17, 0.89, 0.24, 1.11)',
       style({ transform: 'translate(0,0)' })
     ),
   ]),
