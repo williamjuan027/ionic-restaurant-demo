@@ -1,19 +1,40 @@
 <ion-header>
   <ion-toolbar color="light">
     <ion-title color="primary" class="text-center pr-12">
-      <span class="font-cursive">ER</span>
+      Ionic Blocks
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true">
+  <ion-list lines="none">
+    <ng-container *ngFor="let category of options">
+      <ion-list-header>
+        <ion-text class="text-xl font-medium w-full">{{ category.name }}</ion-text>
+      </ion-list-header>
 
-  <div class="bg-white p-1" @staggerFade>
-    <ng-container *ngFor="let option of options">
-      <div>
-        <app-main-option-card [option]="option"></app-main-option-card>
-      </div>
+      <ng-container *ngFor="let option of category.options">
+        <ion-item class="w-full cursor-pointer" (click)="option.onTap()">
+          <ion-card class="w-full p-3 rounded">
+              <div class="flex flex-col sm:flex-row sm:flex-wrap w-full">
+                <div
+                  class="w-24 h-24 p-2 rounded rounded flex justify-center items-center mr-5"
+                  [style.background-color]="option.color">
+                  <ion-icon class="text-5xl text-white" [name]="option.icon"></ion-icon>
+                </div>
+                <div class="flex-1 mt-2">
+                  <ion-text class="text-lg font-semibold">{{ option.name }}</ion-text>
+                  <ion-text class="text-md">
+                    <p>{{ option.description }}</p>
+                  </ion-text>
+                </div>
+            </div>
+            </ion-card>
+        </ion-item>
+      </ng-container>
     </ng-container>
-  </div>
+
+    </ion-list>
+  
 </ion-content>

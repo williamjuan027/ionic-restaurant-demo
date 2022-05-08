@@ -1,0 +1,93 @@
+  <ion-content [fullscreen]="true">
+
+    <div class="product-container">
+        <div class="photo-carousel" @fade>
+            <!-- photo carousel -->
+            <ion-slides pager="true" [options]="slideOpts">
+                <ng-container *ngFor="let slide of product.slides">
+                    <ion-slide>
+                        <ion-img [src]="slide"></ion-img>
+                    </ion-slide>
+                </ng-container>
+            </ion-slides>
+        </div>
+
+        <div class="product-info-sheet" @slideUp>
+            
+            <!-- name and price -->
+            <div class="name-price-container">
+                <ion-text class="product-name">{{ product.name }}</ion-text>
+                <ion-text class="product-price">{{ product.price }}</ion-text>
+            </div>
+
+            <ion-grid>
+                
+                <!-- description -->
+                <ion-row class="section">
+                    <ion-col size="1">
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col size="11">
+                        <ion-text class="section-title">Details</ion-text>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col offset="1">
+                        <ion-text class="section-content">{{ product.description }}</ion-text>
+                    </ion-col>
+                </ion-row>
+
+                <!-- size -->
+                <ion-row class="section size-section">
+                    <ion-col size="1">
+                        <ion-icon name="shirt-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col size="11">
+                        <ion-text class="section-title">Size</ion-text>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col offset="1">
+                        <ng-container *ngFor="let size of product.availableSizes">
+                            <ion-chip outline="true" [color]="size === product.selectedSize ? 'primary' : 'secondary'" (click)="selectSize(size)">
+                                <ion-label [class.selected]="size === product.selectedSize">{{ size }}</ion-label>
+                            </ion-chip>
+                        </ng-container>
+                    </ion-col>
+                </ion-row>
+
+                <!-- color -->
+                <ion-row class="section size-section">
+                    <ion-col size="1">
+                        <ion-icon name="color-palette-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col size="11">
+                        <ion-text class="section-title">Color</ion-text>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col offset="1">
+                        <ng-container *ngFor="let color of product.availableColors">
+                            <ion-chip outline="true" [color]="color === product.selectedColor ? 'primary' : 'secondary'" (click)="selectColor(color)">
+                                <ion-label [class.selected]="color === product.selectedColor">{{ color }}</ion-label>
+                            </ion-chip>
+                        </ng-container>
+                    </ion-col>
+                </ion-row>
+
+                <!-- add to cart -->
+                <ion-row>
+                    <ion-col>
+                        <ion-button size="default" color="primary" expand="block" shape="round" class="cta-button">
+                            <ion-icon slot="start" name="cart-outline"></ion-icon>
+                                Add to Cart
+                          </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+
+    
+  </ion-content>
+  

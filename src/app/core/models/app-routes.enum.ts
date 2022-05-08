@@ -1,4 +1,5 @@
-export enum AppRoutes {
-  home = '/home',
-  lunch = '/lunch',
+export const AppRoutes = {
+  ecommerce: {
+    product: '/ecommerce/product',
+  }
 }

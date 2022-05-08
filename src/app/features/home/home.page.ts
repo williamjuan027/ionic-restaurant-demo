@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AppRoutes, NavigationService, staggerFadeAnimation } from '@app/core';
-import { IOption } from '@app/shared';
 
 @Component({
   selector: 'app-home',
@@ -9,30 +8,28 @@ import { IOption } from '@app/shared';
   animations: [staggerFadeAnimation],
 })
 export class HomePage {
-  options: IOption[] = [
+  options: { name: string, options: { name: string, icon: string, color: string, description: string, onTap: () => void }[]}[] = [
     {
-      name: 'reservation',
-      image: 'assets/images/main-reservation.png',
-      onTap: () => {},
-    },
-    {
-      name: 'lunch',
-      image: 'assets/images/main-lunch.png',
-      onTap: () => {
-        this.navigationService.navigateTo(AppRoutes.lunch);
-      },
-    },
-    {
-      name: 'dinner',
-      image: 'assets/images/main-dinner.png',
-      onTap: () => {},
-    },
-    {
-      name: 'wine',
-      image: 'assets/images/main-wine.png',
-      onTap: () => {},
-    },
-  ];
+      name: 'E-Commerce',
+      options: [
+        {
+          name: 'Product',
+          icon: 'tv-outline',
+          color: '#F973D1',
+          description: 'Your typical product page with carousels to view product images and a sheet with product information',
+          onTap: () => this.navigationService.navigateTo(AppRoutes.ecommerce.product)
+        },
+        // NOT IMPLEMENTED
+        // {
+        //   name: 'Cart',
+        //   icon: 'basket-outline',
+        //   color: '#4ADE80',
+        //   description: 'A page (can also be a modal) displaying the contents of your cart and an option to checkout',
+        //   onTap: () => {}
+        // }
+      ]
+    }
+  ]
 
   constructor(private navigationService: NavigationService) {}
 }

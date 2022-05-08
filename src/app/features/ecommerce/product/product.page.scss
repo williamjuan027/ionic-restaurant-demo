@@ -1,0 +1,65 @@
+$primary-bg: #fff;
+$primary-text: #444;
+$secondary-text: #666;
+$light-text: #fff;
+$accent-text: #f97316;
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 10px 1fr;
+    ion-icon {
+        color: $accent-text;
+        font-size: 1.5rem;
+    }
+    .photo-carousel {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .product-info-sheet {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        border-radius: 15px 15px 0 0;
+        padding: 15px;
+        z-index: 10;
+        background-color: $primary-bg;
+
+        .name-price-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 5px;
+            .product-name {
+                font-weight: 700;
+                font-size: 1.7rem;
+                color: $primary-text;
+            }
+            .product-price {
+                font-weight: 500;
+                font-size: 1.2rem;
+                color: $accent-text;
+            }
+        }
+
+        .section {
+            margin-top: 15px;
+            .section-title {
+                font-weight: 700;
+                font-size: 1.2rem;
+                color: $primary-text;
+            }
+            .section-content {
+                color: $secondary-text;
+            }
+        }
+        .cta-button {
+            ion-icon {
+                color: $light-text;
+            }
+        }
+    }
+}

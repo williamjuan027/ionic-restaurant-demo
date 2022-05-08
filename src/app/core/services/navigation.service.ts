@@ -1,7 +1,6 @@
 import { Location } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppRoutes } from '../models';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +8,7 @@ import { AppRoutes } from '../models';
 export class NavigationService {
   constructor(private router: Router, private location: Location) {}
 
-  navigateTo(path: AppRoutes): void {
+  navigateTo(path: string): void {
     this.router.navigate([path]);
   }
 
